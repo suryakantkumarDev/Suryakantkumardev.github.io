@@ -649,27 +649,61 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <form class="row contact_form" action="https://formspree.io/f/{suryakantk16@gmail.com}" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12 text-right">
-                                <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
-                            </div>
-                        </form>
+                        
+<form class="row contact_form" action="https://formspree.io/f/{your-email}" method="post" id="contactForm" novalidate="novalidate">
+    <div class="col-md-6">
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+        </div>
+    </div>
+    <div class="col-md-12 text-right">
+        <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
+    </div>
+</form>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Submit the form using Formspree
+            fetch("https://formspree.io/f/{your-email}", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json"
+                },
+                body: new FormData(contactForm)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert("Message sent successfully!");
+                    // You can also reset the form here if needed
+                    contactForm.reset();
+                } else {
+                    alert("Failed to send message. Please try again later.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred while sending the message. Please try again later.");
+            });
+        });
+    });
+</script>
                     </div>
                 </div>
             </div>

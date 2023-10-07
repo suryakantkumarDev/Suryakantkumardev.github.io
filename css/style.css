@@ -4486,14 +4486,14 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 /* Style the duration text */
 .portfolio-entry .duration {
   font-size: 1.1rem;
-  color: white;
+  color: white !important;
   margin-bottom: 10px;
 }
 
 /* Style the project description */
 .portfolio-entry p {
   font-size: 0.9rem;
-  color: white;
+  color: white !important;
   margin-bottom: 10px;
 }
 
@@ -4505,7 +4505,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 
 .portfolio-entry li {
   font-size: 0.9rem;
-  color: white;
+  color: white !important;
   margin-bottom: 5px;
 }
 

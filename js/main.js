@@ -42,6 +42,23 @@ const form = document.getElementById("project-form");
 const result = document.getElementById("draft-result");
 const email = "suryakantkumar.dev@gmail.com";
 const service = document.getElementById("service");
+const channels = form.querySelectorAll('input[name="channel"]');
+const upworkMode = () =>
+  form.querySelector('input[name="channel"]:checked').value === "upwork";
+function updateChannel() {
+  const onUpwork = upworkMode();
+  const emailInput = document.getElementById("email");
+  emailInput.required = !onUpwork;
+  emailInput.disabled = onUpwork;
+  document.getElementById("email-field").hidden = onUpwork;
+  document.getElementById("prepare-brief").textContent = onUpwork
+    ? "Prepare Upwork brief ↗"
+    : "Prepare project email ↗";
+  document.getElementById("channel-note").textContent = onUpwork
+    ? "Prepare a brief to copy into Upwork. Discuss your project and next steps there. Nothing is sent automatically."
+    : "Creates a draft for your email app. Nothing is sent or stored by this website.";
+  clearDraft();
+}
 let preparedBrief = "";
 let toastTimer;
 form.hidden = false;
@@ -68,13 +85,33 @@ document
 document
   .getElementById("copy-brief")
   .addEventListener("click", () =>
-    copyText(preparedBrief, "Project brief copied. Paste it into your email."),
+    copyText(
+      preparedBrief,
+      upworkMode()
+        ? "Brief copied. Open Upwork and paste it into your conversation."
+        : "Project brief copied. Paste it into your email.",
+    ),
   );
 function clearDraft() {
   result.hidden = true;
   preparedBrief = "";
 }
 form.addEventListener("input", clearDraft);
+channels.forEach((channel) =>
+  channel.addEventListener("change", updateChannel),
+);
+const entryParams = new URLSearchParams(window.location.search);
+if (entryParams.get("via") === "upwork") {
+  form.querySelector('input[value="upwork"]').checked = true;
+}
+updateChannel();
+const projectServices = {
+  "#saas-project": "SaaS / web application",
+  "#mobile-project": "Existing product / mobile",
+  "#voice-project": "AI integration",
+};
+if (projectServices[window.location.hash])
+  service.value = projectServices[window.location.hash];
 document.querySelectorAll("[data-service]").forEach((link) => {
   link.addEventListener("click", () => {
     service.value = link.dataset.service;
@@ -94,12 +131,22 @@ form.addEventListener("submit", (event) => {
   if (!form.reportValidity()) return;
   const data = new FormData(form);
   const subject = `Project enquiry: ${data.get("service")}`;
-  preparedBrief = `Hi Suryakant,\n\nI’m ${String(data.get("name")).trim()}.\n\nProject type: ${data.get("service")}\n\n${String(data.get("brief")).trim()}\n\nReply to: ${String(data.get("email")).trim()}\n\nThanks,\n${String(data.get("name")).trim()}`;
+  const replyLine = upworkMode()
+    ? ""
+    : `\n\nReply to: ${String(data.get("email")).trim()}`;
+  preparedBrief = `Hi Suryakant,\n\nI’m ${String(data.get("name")).trim()}.\n\nProject type: ${data.get("service")}\n\n${String(data.get("brief")).trim()}${replyLine}\n\nThanks,\n${String(data.get("name")).trim()}`;
   document.getElementById("open-email").href =
     `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(preparedBrief)}`;
   document.getElementById("brief-preview").textContent = preparedBrief;
+  document.getElementById("open-email").hidden = upworkMode();
+  document.getElementById("open-upwork").hidden = !upworkMode();
+  document.getElementById("draft-instructions").textContent = upworkMode()
+    ? "Your brief is ready. Copy it, then open my Upwork profile to start a conversation. Upwork may ask you to sign in."
+    : "Your brief is ready. Open your email app, or copy the brief into your preferred email service.";
   result.hidden = false;
-  document.getElementById("open-email").focus({ preventScroll: true });
+  document
+    .getElementById(upworkMode() ? "copy-brief" : "open-email")
+    .focus({ preventScroll: true });
   result.scrollIntoView({
     block: "nearest",
     behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches

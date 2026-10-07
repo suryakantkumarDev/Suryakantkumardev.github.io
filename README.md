@@ -20,7 +20,7 @@ Open http://localhost:8000. GitHub Pages can serve this repository directly; pub
 
 ## Contact flow
 
-The project form prepares a `mailto:` draft. It does **not** submit to a backend or send email. Visitors review their draft, open an email app, or copy the brief into another email service. Form contents remain on the page and are not stored. Changes to the input invalidate the previous draft. Email, Upwork, and WhatsApp links also work directly.
+The project form prepares a `mailto:` draft. It does **not** submit to a backend or send email. Visitors review their draft, open an email app, or copy the brief into another email service. Form contents remain on the page and are not stored. Changes to the input invalidate the previous draft. Email and WhatsApp links work directly.
 
 Without JavaScript, the navigation, project details, FAQ, and direct contact links remain usable; the draft builder is hidden.
 
@@ -33,3 +33,9 @@ Entrances use the native Web Animations API and IntersectionObserver. Scroll pro
 Project descriptions and employment dates are based on the supplied `resume.tex`. Enterprise brands are identified as deployments through Winit, not direct freelance endorsements. Illustrations are labelled as diagrams, not product screenshots. Add testimonials, measurable outcomes, prices, or availability claims only after verifying them.
 
 The downloadable PDF is the existing file. Check that it matches your latest résumé before sharing the portfolio.
+
+## Upwork enquiries
+
+The Upwork links use the replacement profile URL supplied by Suryakant. The project form supports an Upwork brief: it does not request an email address and prepares text to copy before opening the profile. Nothing is posted automatically. Visiting `?via=upwork` selects this mode. Project anchors (`#saas-project`, `#mobile-project`, `#voice-project`) also select the relevant service on page load.
+
+`UPWORK_STARTER_KIT.md` contains draft profile copy, a proposal template, and links to relevant projects. Publish the website changes before sharing those public links.

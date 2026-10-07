@@ -8,7 +8,7 @@ The original local page made it hard for a potential client to judge fit and cre
 | --- | --- |
 | Four hero actions, a talking avatar, and a long catalogue competed for attention. | One main enquiry action, a work link, and a clear sequence: work → services → process → background → contact. |
 | Broad claims such as “zero post-release defects,” fixed 2–4 week delivery, and precise project performance numbers lacked supporting evidence in the supplied material. | Removed universal guarantees, automatic quotes, and unsupported metrics. Scope and pricing are discussed after requirements. |
-| Named testimonials and verified badges had no review URLs or source records. | Removed them from the page. Kept a direct Upwork profile link without rating claims. |
+| Named testimonials and verified badges had no review URLs or source records. | Removed them from the page. An older Upwork profile URL was reported unavailable and was replaced with the updated URL supplied by Suryakant. |
 | Enterprise brands appeared to be direct clients or endorsements. | Described them as deployments delivered through employment at Winit. |
 | Project details were mostly behind modal interactions. | Visible problem/contribution summaries, with native expandable engineering details. |
 | An animated avatar was presented as an AI guide although the logic used scripted responses. | Replaced it with a real portrait and project-specific workflow illustrations. |
@@ -41,7 +41,7 @@ The design uses warm neutral backgrounds, dark green typography, a restrained li
 1. Permission-approved product screenshots or a short walkthrough of the AI website product. Real product evidence is stronger than a diagram.
 2. Two or three attributable client reviews with source links and permission to quote.
 3. One measured outcome for each project, including what was measured and the baseline. Avoid numbers that cannot be demonstrated.
-4. Confirm that the existing PDF, current employment, project URL, and Upwork profile are up to date.
+4. Confirm that the existing PDF, current employment, and project URL are up to date. The updated Upwork profile URL was supplied by Suryakant.
 5. Track which relevant proposals bring portfolio visits and qualified conversations before judging conversion. A redesign can improve the presentation; it cannot establish demand or guarantee clients.
 
 For Upwork outreach, link the project that matches the client’s problem and explain your relevant contribution. Keep the proposal specific to the job rather than relying on animations to make the case.

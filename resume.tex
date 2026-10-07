@@ -1,0 +1,154 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[left=0.6in,right=0.6in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[none]{hyphenat}
+\usepackage{titlesec}
+\usepackage[unicode,hidelinks]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\definecolor{accent}{RGB}{24,55,96}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
+\emergencystretch=2em
+\urlstyle{same}
+
+\titleformat{\section}{\color{accent}\bfseries\normalsize}{}{0pt}{\MakeUppercase}[\vspace{-2pt}\color{accent}\titlerule]
+\titlespacing{\section}{0pt}{9pt}{4pt}
+\setlist[itemize]{leftmargin=1.1em,itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+
+\newcommand{\role}[4]{%
+  \textbf{#1} \textbar\ \textbf{#2} \hfill \textbf{#4}\\[-1pt]
+  {\small #3}\par\vspace{1pt}}
+
+\newcommand{\project}[3]{%
+  \textbf{#1} \hfill {\small #2}\\[-1pt]
+  {\small \textit{#3}}\par\vspace{1pt}}
+
+\begin{document}
+
+%---------------- HEADER ----------------
+\begin{center}
+{\fontsize{21}{23}\selectfont\bfseries\color{accent} SURYAKANT KUMAR}\\[2pt]
+{\normalsize\bfseries Full-Stack Software Engineer \textbar\ React \textbar\ TypeScript \textbar\ Java \textbar\ Node.js}\\[3pt]
+{\small Hyderabad, India \textbar\ \href{mailto:suryakantkumar.dev@gmail.com}{suryakantkumar.dev@gmail.com} \textbar\ +91-8051942924}\\[1pt]
+{\small \href{https://www.linkedin.com/in/suryakant-kumar-developer}{linkedin.com/in/suryakant-kumar-developer} \textbar\
+\href{https://github.com/suryakantkumarDev}{github.com/suryakantkumarDev} \textbar\
+\href{https://suryakantkumardev.github.io/}{suryakantkumardev.github.io}}
+\end{center}
+
+%---------------- SUMMARY ----------------
+\section*{Professional Summary}
+Full-Stack Software Engineer with 3+ years of experience shipping production SaaS, web, and mobile applications with \textbf{React.js, Next.js, TypeScript, Java, Node.js, PostgreSQL, and AWS}. Currently at Winit, building enterprise Sales Force Automation products used by clients such as \textbf{PepsiCo, Multiplex, and LBCL} across web, React Native mobile, and Java/Node.js backends. Strong in REST API design, authentication and RBAC, SQL data modeling, offline-first sync, CI/CD, and production debugging. Experienced in AI-powered products (OpenAI, Gemini, real-time speech translation) and in AI-assisted development with Claude Code and OpenAI Codex.
+
+%---------------- SKILLS ----------------
+\section*{Technical Skills}
+\textbf{Languages:} Java, TypeScript, JavaScript (ES6+), Python, SQL \\[2pt]
+\textbf{Frontend \& Mobile:} React.js, Next.js, React Native, Expo, Redux Toolkit, Tailwind CSS, HTML5, CSS3, Responsive UI \\[2pt]
+\textbf{Backend \& APIs:} Java, Node.js, Express.js, FastAPI, REST APIs, WebSockets, JWT, OAuth 2.0, RBAC, Microservices \\[2pt]
+\textbf{Databases:} PostgreSQL, MongoDB, MySQL, Redis, Firebase Firestore, Elasticsearch \\[2pt]
+\textbf{Cloud \& DevOps:} AWS (EC2, S3, CloudFront, API Gateway), Azure, Railway, Docker, GitHub Actions, CI/CD, Git \\[2pt]
+\textbf{AI Engineering:} OpenAI API, Gemini API, Bhashini API, Claude Code, OpenAI Codex, prompt engineering
+
+%---------------- EXPERIENCE ----------------
+\section*{Professional Experience}
+
+\role{Software Engineer}{Winit Information Technology}{Hyderabad, India}{Jul 2025 -- Present}
+\begin{itemize}
+  \item Build and enhance a multi-tenant Sales Force Automation platform across \textbf{React/Next.js web, React Native mobile, and Java/Node.js services}, covering retailers, routes, orders, returns, invoicing, inventory, and sales operations.
+  \item Developed secure backend APIs and business logic with JWT authentication, role-based access control, request validation, and relational data models consumed by web and mobile clients.
+  \item Built offline-first React Native workflows so field sales reps can capture orders, returns, and stock activity without connectivity and sync automatically when the network returns.
+  \item Designed and optimized PostgreSQL queries, dashboards, and reporting flows with multi-tenant access patterns; resolved production issues and improved performance.
+  \item Delivered and maintain deployments for \textbf{PepsiCo, Multiplex, and LBCL} on AWS and Railway using Git-based delivery, CI/CD, code review, and release validation.
+  \item Use Claude Code and OpenAI Codex to speed up implementation, refactoring, debugging, and review, with manual validation for correctness and security.
+\end{itemize}
+
+\role{Software Engineer}{Atomstate Technologies}{Hyderabad, India}{Jan 2023 -- May 2025}
+\begin{itemize}
+  \item Built customer-facing applications with \textbf{React.js, Next.js, Node.js, FastAPI, TypeScript, and MongoDB}, working across frontend, backend APIs, third-party integrations, and production releases.
+  \item Designed RESTful APIs and service integrations for AI-enabled interview, transcription, and business platforms, including authentication, asynchronous workflows, and real-time WebSocket communication.
+  \item Containerized services with Docker and maintained GitHub Actions CI/CD pipelines and cloud deployments; resolved defects in Agile sprints alongside product, design, QA, and DevOps teams.
+\end{itemize}
+
+%---------------- EDUCATION ----------------
+\section*{Education}
+\textbf{B.Tech. in Computer Science and Engineering} \hfill \textbf{2018 -- 2022}\\[-1pt]
+Teegala Krishna Reddy Engineering College, Hyderabad
+
+\newpage
+
+%---------------- PROJECTS ----------------
+\section*{Selected Projects}
+
+\project{AI Website Generator with Admin Panel}{\href{https://portal.nextgendigitalcraft.com/}{portal.nextgendigitalcraft.com}}{Next.js, Node.js, AWS, OpenAI API, Gemini API, Razorpay}
+\begin{itemize}
+  \item Built a SaaS platform that generates functional websites from natural-language prompts, with multi-model AI integration (OpenAI and Gemini).
+  \item Implemented an admin panel for managing users and AI usage, plus authentication and Razorpay payment workflows; deployed on AWS.
+\end{itemize}
+
+\project{Real-Time Call Translation \& Transcription}{}{FastAPI, WebSockets, MongoDB, AWS, Bhashini API}
+\begin{itemize}
+  \item Built a multilingual voice service that streams audio over WebSockets for live transcription and translation.
+  \item Integrated the Bhashini API and handled live session processing, persistence in MongoDB, and cloud deployment on AWS.
+\end{itemize}
+
+\project{Multi-Tenant Sales Force Automation Platform}{Winit (PepsiCo, Multiplex, LBCL)}{React, Next.js, React Native, Java, Node.js, PostgreSQL, AWS}
+\begin{itemize}
+  \item Enterprise SFA product covering orders, returns, invoicing, inventory, and reporting across web and mobile.
+  \item Implemented tenant-level data isolation and role-based access so each client sees only its own data and features.
+\end{itemize}
+
+\project{Offline-First Field Sales Mobile App}{Winit}{React Native, Expo, Redux Toolkit, REST APIs}
+\begin{itemize}
+  \item Mobile app for field reps with local data capture and background sync, so orders, returns, and stock activity are not lost in low-connectivity areas.
+  \item Handled sync queues and retry on reconnect, keeping device data consistent with the backend.
+\end{itemize}
+
+\project{AI Interview \& Transcription Platform}{Atomstate Technologies}{React, Next.js, FastAPI, WebSockets, MongoDB, Docker}
+\begin{itemize}
+  \item Web platform for AI-assisted interviews with live transcription and real-time communication over WebSockets.
+  \item Containerized with Docker and shipped through GitHub Actions CI/CD pipelines.
+\end{itemize}
+
+\project{Authentication \& Role-Based Access Service}{Winit}{Java, Node.js, JWT, OAuth 2.0, PostgreSQL}
+\begin{itemize}
+  \item Built token-based authentication and role-based authorization shared by web and mobile clients across tenants.
+  \item Added request validation and permission checks on API endpoints to protect enterprise data.
+\end{itemize}
+
+\project{Sales Reporting \& Analytics Dashboards}{Winit}{Next.js, TypeScript, PostgreSQL, REST APIs}
+\begin{itemize}
+  \item Built dashboards and reporting views for sales, orders, returns, and inventory data backed by optimized SQL queries.
+  \item Improved report responsiveness by tuning queries and multi-tenant data access patterns.
+\end{itemize}
+
+\project{CI/CD \& Containerized Deployment Pipeline}{Atomstate Technologies}{Docker, GitHub Actions, AWS, Git}
+\begin{itemize}
+  \item Containerized services with Docker and automated build and deploy steps with GitHub Actions.
+  \item Supported cloud releases and quick defect fixes alongside QA and DevOps teams.
+\end{itemize}
+
+%---------------- ACHIEVEMENTS ----------------
+\section*{Achievements}
+\begin{itemize}
+  \item Recognized for clean, modular code that was reused across multiple teams and projects.
+  \item Shipped production releases with zero post-release defects.
+  \item National-level hackathon finalist, delivering a working MVP under tight time limits.
+\end{itemize}
+
+%---------------- EXTRA-CURRICULAR ----------------
+\section*{Extra-Curricular Activities}
+\begin{itemize}
+  \item Contributor to open-source projects in React and Node.js.
+  \item Mentored junior developers on Git workflows and clean code practices.
+  \item Exploring prompt engineering and AI tools for business automation.
+\end{itemize}
+
+\end{document}

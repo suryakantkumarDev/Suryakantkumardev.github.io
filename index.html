@@ -1,73 +1,807 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/Photo.png" />
-
-    <!-- SEO Meta Tags -->
-    <title>
-      Suryakant Kumar | Full-Stack Software Engineer - React, Node, AWS
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Suryakant Kumar — Full-Stack Developer for SaaS, AI & Mobile</title>
     <meta
       name="description"
-      content="Experienced Full-Stack Software Engineer specializing in React.js, Node.js, React Native, and AWS cloud services. Building scalable enterprise applications and websites."
+      content="I help founders and product teams build SaaS products, practical AI features, and mobile apps. Explore Suryakant Kumar’s work and discuss your project."
     />
-    <meta
-      name="keywords"
-      content="Full-Stack Developer, Software Engineer, React.js, React Native, Node.js, FastAPI, AWS, JavaScript, TypeScript, MongoDB, Hyderabad"
+    <meta name="theme-color" content="#f6f5f0" />
+    <link rel="canonical" href="https://suryakantkumardev.github.io/" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231c2928'/%3E%3Ctext x='10' y='42' font-family='Arial' font-size='29' font-weight='700' fill='%23ddf78b'%3Esk.%3C/text%3E%3C/svg%3E"
     />
-    <meta name="author" content="Suryakant Kumar" />
-
-    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://suryakantkumardev.github.io/" />
     <meta
       property="og:title"
-      content="Suryakant Kumar | Full-Stack Software Engineer"
+      content="Suryakant Kumar — Your idea. A working product."
     />
     <meta
       property="og:description"
-      content="Experienced Full-Stack Software Engineer specializing in React.js, Node.js, React Native, and AWS cloud services."
+      content="Full-stack development for founders and product teams. SaaS, practical AI integrations, and mobile apps — from first scope to production."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://suryakantkumardev.github.io" />
-    <meta property="og:image" content="/Photo.png" />
-
-    <!-- Twitter Card data -->
+    <meta
+      property="og:image"
+      content="https://suryakantkumardev.github.io/assets/profile2-DGjdmrOW.jpeg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Suryakant Kumar working on his laptop"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Suryakant Kumar | Full-Stack Software Engineer"
-    />
-    <meta
-      name="twitter:description"
-      content="Experienced Full-Stack Software Engineer specializing in React.js, Node.js, React Native, and AWS cloud services."
-    />
-    <meta name="twitter:image" content="/Photo.png" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- AOS Animation Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-
-    <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script type="module" crossorigin src="/assets/index-DDjP7Alr.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-VUnytMw-.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Suryakant Kumar",
+        "jobTitle": "Full-Stack Software Engineer",
+        "url": "https://suryakantkumardev.github.io/",
+        "image": "https://suryakantkumardev.github.io/assets/profile2-DGjdmrOW.jpeg",
+        "sameAs": [
+          "https://github.com/suryakantkumarDev",
+          "https://linkedin.com/in/suryakant-kumar-developer"
+        ],
+        "knowsAbout": [
+          "SaaS development",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "React Native",
+          "Node.js",
+          "PostgreSQL"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="#overview" aria-label="Suryakant Kumar, home"
+          ><span class="monogram">sk<span>.</span></span
+          ><span>Suryakant Kumar<small>Full-stack developer</small></span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          hidden
+        >
+          Menu <span aria-hidden="true">＋</span>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="#projects">Selected work</a><a href="#services">Services</a
+          ><a href="#about">About</a
+          ><a class="button button-small" href="#contact"
+            >Let’s talk <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section
+        class="hero container"
+        id="overview"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> Independent
+            projects · Remote collaboration
+          </p>
+          <h1 id="hero-title">
+            Your idea.<br />A working<br /><span class="serif">product.</span
+            ><span class="hero-asterisk" aria-hidden="true">✳</span>
+          </h1>
+          <p class="hero-description">
+            I help founders and product teams turn complex ideas into usable
+            software — from SaaS products to AI features and mobile apps.
+          </p>
+          <div class="button-row">
+            <a class="button" href="#contact"
+              >Tell me what you’re building <span aria-hidden="true">↗</span></a
+            ><a class="text-link" href="#projects"
+              >Explore my work <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <div class="hero-footnote">
+            <span>Built across the stack.</span
+            ><span>Owned from scope to handover.</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="portrait-frame">
+            <img
+              src="assets/profile2-DGjdmrOW.jpeg"
+              alt="Suryakant Kumar working on a laptop"
+              width="960"
+              height="1280"
+              fetchpriority="high"
+            />
+            <div class="portrait-caption">
+              <span
+                >Suryakant Kumar<small
+                  >Developer. Problem solver. Your collaborator.</small
+                ></span
+              ><span class="caption-arrow" aria-hidden="true">↗</span>
+            </div>
+          </div>
+          <div class="experience-note">
+            <strong>3+ <span>years</span></strong
+            ><span>Building web, mobile<br />& enterprise software</span>
+          </div>
+          <div class="location-note">
+            <span aria-hidden="true">↳</span> Based in Hyderabad, working
+            globally.
+          </div>
+        </div>
+      </section>
+      <div class="experience-strip">
+        <div class="container experience-inner">
+          <p>
+            Enterprise product experience<br /><span
+              >Delivered as part of the team at Winit</span
+            >
+          </p>
+          <div class="company-names">
+            <span>PepsiCo</span><span>Multiplex</span><span>LBCL</span>
+          </div>
+          <a class="text-link" href="#about"
+            >My background <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+      <section
+        class="section container"
+        id="projects"
+        aria-labelledby="work-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / Selected work</p>
+            <h2 id="work-title">
+              Real problems.<br /><span class="serif"
+                >Thoughtful engineering.</span
+              >
+            </h2>
+          </div>
+          <p>
+            A closer look at what I’ve built, the problems behind it, and my
+            contribution.
+          </p>
+        </div>
+        <article class="project project-featured">
+          <div
+            class="project-visual visual-ai"
+            aria-label="Architecture overview of the AI website generator"
+          >
+            <div class="visual-topline">
+              <span>PROJECT / 01</span><span>AI + SAAS</span>
+            </div>
+            <div class="flow-ui">
+              <div class="flow-prompt">
+                <span class="mini-label">THE STARTING POINT</span>
+                <p>“I need a website<br />for my business.”</p>
+                <span class="prompt-arrow" aria-hidden="true">↗</span>
+              </div>
+              <div class="flow-connector" aria-hidden="true">↓</div>
+              <div class="flow-models">
+                <span>OpenAI</span><span>Gemini</span>
+              </div>
+              <div class="flow-connector" aria-hidden="true">↓</div>
+              <div class="site-wireframe" aria-hidden="true">
+                <div class="wire-nav"><b>your brand.</b><span>•••</span></div>
+                <div class="wire-content">
+                  <div><i></i><i></i><em></em></div>
+                  <div class="wire-art">✳</div>
+                </div>
+              </div>
+            </div>
+            <p class="visual-caption">
+              System overview · not a product screenshot
+            </p>
+          </div>
+          <div class="project-copy">
+            <p class="eyebrow">Web application / AI integration</p>
+            <h3>From a prompt<br />to a website.</h3>
+            <p>
+              A website generator that brings AI creation, user management, and
+              payments into one product.
+            </p>
+            <dl>
+              <div>
+                <dt>The challenge</dt>
+                <dd>
+                  Connect AI generation to the everyday needs of a SaaS
+                  business: accounts, usage management, and billing.
+                </dd>
+              </div>
+              <div>
+                <dt>My contribution</dt>
+                <dd>
+                  Built the generation workflow with OpenAI and Gemini, the
+                  admin panel, authentication, and Razorpay payment integration.
+                </dd>
+              </div>
+            </dl>
+            <div class="tags">
+              <span>Next.js</span><span>Node.js</span><span>AI APIs</span
+              ><span>AWS</span>
+            </div>
+            <div class="project-links">
+              <a
+                class="text-link"
+                href="https://portal.nextgendigitalcraft.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit the product <span aria-hidden="true">↗</span></a
+              ><a
+                class="subtle-link"
+                href="#contact"
+                data-service="SaaS / web application"
+                >Build something similar →</a
+              >
+            </div>
+          </div>
+        </article>
+        <div class="project-grid">
+          <article class="project project-compact">
+            <div class="project-visual visual-sales">
+              <div class="visual-topline">
+                <span>PROJECT / 02</span><span>WEB + MOBILE</span>
+              </div>
+              <div class="sales-diagram">
+                <div class="sales-hub">
+                  <span aria-hidden="true">▦</span
+                  ><strong>Field operations</strong
+                  ><small>One connected workflow</small>
+                </div>
+                <div class="sales-nodes">
+                  <span>Orders</span><span>Inventory</span><span>Reports</span>
+                </div>
+                <div class="sync-note">
+                  <span class="status-dot" aria-hidden="true"></span> Capture
+                  offline <span aria-hidden="true">→</span> Sync on reconnect
+                </div>
+              </div>
+              <p class="visual-caption">
+                Workflow illustration · employer project
+              </p>
+            </div>
+            <div class="project-copy">
+              <p class="eyebrow">Enterprise software / Winit</p>
+              <h3>Keep field sales moving.<br />Even without a signal.</h3>
+              <p>
+                Sales teams need to capture orders, returns, and stock activity
+                when connectivity is unreliable.
+              </p>
+              <dl>
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>
+                    Developed offline capture and sync workflows in React
+                    Native, backend APIs, tenant access controls, and sales
+                    reporting as part of Winit’s engineering team.
+                  </dd>
+                </div>
+                <div>
+                  <dt>What it enables</dt>
+                  <dd>
+                    Field activity recorded on the device and synchronized when
+                    connectivity returns, with web reporting for operations
+                    teams.
+                  </dd>
+                </div>
+              </dl>
+              <div class="tags">
+                <span>React Native</span><span>Java / Node.js</span
+                ><span>PostgreSQL</span>
+              </div>
+              <details>
+                <summary>
+                  Engineering details <span aria-hidden="true">＋</span>
+                </summary>
+                <div class="detail-body">
+                  <p>
+                    Local capture and retry queues support interrupted
+                    connections. Tenant-level access checks and role-based
+                    permissions control access to shared backend services.
+                  </p>
+                  <p>
+                    Work completed through Winit for deployments including
+                    PepsiCo, Multiplex, and LBCL. Source code and internal
+                    interfaces are not publicly available.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project project-compact">
+            <div class="project-visual visual-voice">
+              <div class="visual-topline">
+                <span>PROJECT / 03</span><span>REAL-TIME AUDIO</span>
+              </div>
+              <div class="voice-diagram">
+                <div class="waveform" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                  ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                  ><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="voice-flow">
+                  <span>Speech</span><span aria-hidden="true">↗</span
+                  ><span>Transcript</span><span aria-hidden="true">↗</span
+                  ><span>Translation</span>
+                </div>
+                <p>
+                  Different languages.<br /><span class="serif"
+                    >A shared conversation.</span
+                  >
+                </p>
+              </div>
+              <p class="visual-caption">
+                Processing overview · not a product screenshot
+              </p>
+            </div>
+            <div class="project-copy">
+              <p class="eyebrow">AI integration / Voice & language</p>
+              <h3>Make live conversations<br />work across languages.</h3>
+              <p>
+                A multilingual voice service connecting streamed audio to
+                transcription and translation.
+              </p>
+              <dl>
+                <div>
+                  <dt>My contribution</dt>
+                  <dd>
+                    Built the FastAPI service, WebSocket audio streaming,
+                    Bhashini API integration, session persistence, and AWS
+                    deployment.
+                  </dd>
+                </div>
+                <div>
+                  <dt>What it enables</dt>
+                  <dd>
+                    Audio processed during a live session, with transcripts
+                    stored for use after the conversation.
+                  </dd>
+                </div>
+              </dl>
+              <div class="tags">
+                <span>Python / FastAPI</span><span>WebSockets</span
+                ><span>Bhashini</span>
+              </div>
+              <details>
+                <summary>
+                  Engineering details <span aria-hidden="true">＋</span>
+                </summary>
+                <div class="detail-body">
+                  <p>
+                    WebSockets carry audio to the service for transcription and
+                    translation. MongoDB persists session data, with the
+                    application hosted on AWS.
+                  </p>
+                  <p>
+                    This overview is based on my project experience. No public
+                    demo or independently measured latency benchmark is
+                    provided.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+        <div class="work-footer">
+          <p>Want to talk through the implementation behind a project?</p>
+          <a class="text-link" href="#contact"
+            >Let’s discuss the details <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section
+        class="services-section"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <div class="container section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / How I can help</p>
+              <h2 id="services-title">
+                Start where<br /><span class="serif">your product is.</span>
+              </h2>
+            </div>
+            <p>
+              A new idea, an existing product, or a difficult technical problem.
+              Let’s find the right next step.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service">
+              <span class="service-number"
+                >01 <span aria-hidden="true">↗</span></span
+              >
+              <h3>Build your<br />first version.</h3>
+              <p>
+                For founders who need a focused product they can put in front of
+                real users.
+              </p>
+              <ul>
+                <li>Core user journey and application UI</li>
+                <li>Authentication, database, and APIs</li>
+                <li>Payment integration and deployment</li>
+              </ul>
+              <a
+                class="text-link"
+                href="#contact"
+                data-service="SaaS / web application"
+                >Discuss your MVP <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service">
+              <span class="service-number"
+                >02 <span aria-hidden="true">✳</span></span
+              >
+              <h3>Add AI with<br />a purpose.</h3>
+              <p>
+                For teams with a specific workflow that could benefit from
+                generation, speech, or automation.
+              </p>
+              <ul>
+                <li>OpenAI and Gemini integrations</li>
+                <li>Live transcription and translation</li>
+                <li>Usage management and backend workflows</li>
+              </ul>
+              <a class="text-link" href="#contact" data-service="AI integration"
+                >Talk through your AI use case
+                <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service">
+              <span class="service-number"
+                >03 <span aria-hidden="true">⌘</span></span
+              >
+              <h3>Move your<br />product forward.</h3>
+              <p>
+                For product teams extending an app or untangling a problem in an
+                existing codebase.
+              </p>
+              <ul>
+                <li>React Native mobile features</li>
+                <li>Backend APIs and SQL performance</li>
+                <li>Debugging, integrations, and releases</li>
+              </ul>
+              <a
+                class="text-link"
+                href="#contact"
+                data-service="Existing product / mobile"
+                >Tell me what’s getting in the way
+                <span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+          <p class="scope-note">
+            Scope, timeline, and price are agreed after reviewing your
+            requirements. Start with a short brief; it doesn’t need to be a
+            specification.
+          </p>
+        </div>
+      </section>
+      <section
+        class="section container process-section"
+        id="process"
+        aria-labelledby="process-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / Working together</p>
+            <h2 id="process-title">
+              Clear scope.<br /><span class="serif">Visible progress.</span>
+            </h2>
+          </div>
+          <p>
+            You should know what’s being built, why it matters, and what happens
+            next.
+          </p>
+        </div>
+        <ol class="process-grid">
+          <li>
+            <span>01 — DISCOVER</span>
+            <h3>Understand the problem</h3>
+            <p>
+              We discuss your users, current product, constraints, and what
+              success looks like.
+            </p>
+          </li>
+          <li>
+            <span>02 — DEFINE</span>
+            <h3>Agree on the essentials</h3>
+            <p>
+              We set deliverables, milestones, budget, and acceptance criteria
+              before implementation.
+            </p>
+          </li>
+          <li>
+            <span>03 — BUILD</span>
+            <h3>Review working software</h3>
+            <p>
+              We use demos and milestone reviews to surface feedback while it’s
+              still useful.
+            </p>
+          </li>
+          <li>
+            <span>04 — HAND OVER</span>
+            <h3>Make the next step clear</h3>
+            <p>
+              Delivery includes agreed source code, setup notes, and a
+              discussion of ongoing support.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">04 / The person behind the code</p>
+            <h2 id="about-title">
+              Hi, I’m Suryakant.<br /><span class="serif"
+                >I connect the dots.</span
+              >
+            </h2>
+            <p class="about-lead">
+              Between the interface your users see and the systems that make it
+              work.
+            </p>
+            <p>
+              I’m a full-stack software engineer based in Hyderabad, India. My
+              experience spans SaaS applications, enterprise sales systems,
+              mobile workflows, and AI integrations.
+            </p>
+            <p>
+              I work across frontend and backend, so the conversation can stay
+              focused on your product instead of getting lost between separate
+              pieces of the stack.
+            </p>
+            <div class="button-row">
+              <a
+                class="text-link"
+                href="https://github.com/suryakantkumarDev"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
+              ><a
+                class="text-link"
+                href="https://linkedin.com/in/suryakant-kumar-developer"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn ↗</a
+              ><a
+                class="text-link"
+                href="assets/Suryakant_kumar_Resume-BtmRS4SX.pdf"
+                download="Suryakant_Kumar_Resume.pdf"
+                >Resume ↓</a
+              >
+            </div>
+          </div>
+          <div class="background-card">
+            <p class="eyebrow">Experience</p>
+            <div class="job">
+              <span>JUL 2025 — PRESENT</span>
+              <h3>Winit Information Technology</h3>
+              <p>Software Engineer</p>
+              <small>Enterprise web & mobile · Sales force automation</small>
+            </div>
+            <div class="job">
+              <span>JAN 2023 — MAY 2025</span>
+              <h3>Atomstate Technologies</h3>
+              <p>Software Engineer</p>
+              <small>Full-stack applications · AI & real-time workflows</small>
+            </div>
+            <div class="stack">
+              <p class="eyebrow">The tools behind the work</p>
+              <p>
+                React · Next.js · TypeScript · React Native<br />Node.js · Java
+                · Python · PostgreSQL<br />AWS · Docker · GitHub Actions
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section container faq-section"
+        aria-labelledby="faq-title"
+      >
+        <div>
+          <p class="eyebrow">A few practical things</p>
+          <h2 id="faq-title">
+            Before we<br /><span class="serif">get started.</span>
+          </h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>
+              How much will my project cost?<span aria-hidden="true">＋</span>
+            </summary>
+            <p>
+              It depends on the features, integrations, and existing code. Share
+              your priorities and budget range; we can agree on a useful first
+              milestone and a proposal before work begins.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Can you work with an existing codebase?<span aria-hidden="true"
+                >＋</span
+              >
+            </summary>
+            <p>
+              Yes. Include your stack and the problem you’re trying to solve in
+              your brief. An initial code review helps establish a realistic
+              scope for fixes or new features.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Can we work through Upwork?<span aria-hidden="true">＋</span>
+            </summary>
+            <p>
+              Yes. You can
+              <a
+                href="https://www.upwork.com/freelancers/~01b6e4d656094dd58e"
+                target="_blank"
+                rel="noopener noreferrer"
+                >contact me on Upwork</a
+              >
+              to discuss the scope and manage the engagement there.
+            </p>
+          </details>
+          <details>
+            <summary>
+              What happens after launch?<span aria-hidden="true">＋</span>
+            </summary>
+            <p>
+              We agree on handover and any support period in the scope. Ongoing
+              maintenance or additional features can be planned as a separate
+              milestone.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span> 05 / Let’s
+              build something useful
+            </p>
+            <h2 id="contact-title">
+              What are you<br /><span class="serif">working on?</span>
+            </h2>
+            <p>
+              Tell me where you are and where you want to go. We can start with
+              a conversation about fit, scope, and the next step.
+            </p>
+            <a class="contact-email" href="mailto:suryakantkumar.dev@gmail.com"
+              >suryakantkumar.dev@gmail.com <span aria-hidden="true">↗</span></a
+            >
+            <div class="contact-alternatives">
+              <button type="button" class="subtle-link" id="copy-email" hidden>
+                Copy email</button
+              ><a
+                href="https://www.upwork.com/freelancers/~01b6e4d656094dd58e"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Connect on Upwork ↗</a
+              ><a
+                href="https://wa.me/918051942924"
+                target="_blank"
+                rel="noopener noreferrer"
+                >WhatsApp ↗</a
+              >
+            </div>
+            <p class="contact-location">
+              Hyderabad, India · UTC+5:30 · Remote collaboration
+            </p>
+          </div>
+          <form id="project-form" class="brief-form" hidden>
+            <h3>A little context goes a long way.</h3>
+            <div class="form-row">
+              <div>
+                <label for="name">Your name</label
+                ><input
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Alex"
+                  required
+                  maxlength="100"
+                />
+              </div>
+              <div>
+                <label for="email">Your email</label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="alex@company.com"
+                  required
+                  maxlength="180"
+                />
+              </div>
+            </div>
+            <label for="service">What do you need help with?</label
+            ><select id="service" name="service">
+              <option>SaaS / web application</option>
+              <option>AI integration</option>
+              <option>Existing product / mobile</option>
+              <option>Something else / not sure yet</option></select
+            ><label for="brief">Tell me about your project</label
+            ><textarea
+              id="brief"
+              name="brief"
+              rows="4"
+              placeholder="What are you building? What’s the main challenge? Include a timeline or budget if you have one."
+              required
+              minlength="15"
+              maxlength="4000"
+            ></textarea
+            ><button class="button" type="submit">
+              Prepare project email <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-note">
+              Creates a draft for your email app. Nothing is sent or stored by
+              this website.
+            </p>
+            <div id="draft-result" class="draft-result" hidden>
+              <p>
+                Your brief is ready. Open your email app, or copy the brief into
+                your preferred email service.
+              </p>
+              <a
+                class="button button-small"
+                id="open-email"
+                href="mailto:suryakantkumar.dev@gmail.com"
+                >Open email app ↗</a
+              ><button class="text-link" id="copy-brief" type="button">
+                Copy brief
+              </button>
+              <details>
+                <summary>View your prepared brief</summary>
+                <pre id="brief-preview"></pre>
+              </details>
+            </div>
+          </form>
+          <noscript
+            ><p>
+              Email me at
+              <a href="mailto:suryakantkumar.dev@gmail.com"
+                >suryakantkumar.dev@gmail.com</a
+              >
+              with your project idea, requirements, and timeline.
+            </p></noscript
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="container footer">
+      <a class="monogram" href="#overview" aria-label="Back to top"
+        >sk<span>.</span></a
+      >
+      <p>© <span id="year">2026</span> Suryakant Kumar</p>
+      <span>Made with care. Built to work.</span
+      ><a class="text-link" href="#overview">Back to top ↑</a>
+    </footer>
+    <p class="toast" id="status" role="status" aria-live="polite"></p>
   </body>
 </html>
